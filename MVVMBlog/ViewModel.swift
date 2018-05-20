@@ -21,7 +21,7 @@ class ViewModel: NSObject {
     
     //4 - This function is what directly accesses the apiClient to make the API call
     func getApps(completion: @escaping () -> Void) {
-        
+
         //5 - call on the apiClient to fetch the apps
         apiClient.fetchAppList { (arrayOfAppsDictionaries) in
             
@@ -49,26 +49,21 @@ class ViewModel: NSObject {
     }
     
     //11 -
-    func appRatingToDisplay(for indexPath: IndexPath) -> String {
-        return apps?[indexPath.row].value(forKeyPath: "contentAdvisoryRating") as? String ?? ""
+    func genreToDisplay(for indexPath: IndexPath) -> String {
+        let genres = apps?[indexPath.row].value(forKeyPath: "genres") as? [NSDictionary]
+        return genres?[0].value(forKeyPath: "name") as? String ?? ""
     }
-    
-    
-    
+
+    func imageToDisplay(for indexPath: IndexPath, completion: @escaping (UIImage?) -> Void) {
+
+        guard let urlString = apps?[indexPath.row].value(forKeyPath: "artworkUrl100") as? String else {
+            return
+        }
+
+        apiClient.fetchImage(imageURL: urlString) { image in
+            DispatchQueue.main.async {
+                completion(image)
+            }
+        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

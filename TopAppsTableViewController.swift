@@ -25,44 +25,21 @@ class TopAppsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    //4 -
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfItemsToDisplay(in: section)
     }
 
-    //5 -
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //6 -
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //7 -
+
         cell.textLabel?.text = viewModel.appTitleToDisplay(for: indexPath)
-        //8 -
-        cell.detailTextLabel?.text = viewModel.appRatingToDisplay(for: indexPath)
+        cell.detailTextLabel?.text = viewModel.genreToDisplay(for: indexPath)
+
+        viewModel.imageToDisplay(for: indexPath) {
+            cell.imageView?.image = $0
+            cell.setNeedsLayout()
+        }
+        
         return cell
     }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
