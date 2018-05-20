@@ -13,14 +13,17 @@ class APIClient: NSObject {
 
     //2 - the completion handler will be executed after our top 100 app data is fetched
     // our completion handler will include an optional array of NSDictionaries parsed from our retrieved JSON object
+
+    var defaultSession: DHURLSession = URLSession(configuration: .default)
+    
     func fetchAppList(completion: @escaping ([NSDictionary]?) -> Void) {
         
         //3 - unwrap our API endpoint
         guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/100/explicit.json") else {
             print("Error unwrapping URL"); return }
-        
+
         //4 - create a session and dataTask on that session to get data/response/error
-        let session = URLSession.shared
+        let session = defaultSession
         let dataTask = session.dataTask(with: url) { (data, response, error) in
             
             //5 - unwrap our returned data
