@@ -48,12 +48,8 @@
                             <outlet property="delegate" destination="3mg-ua-t39" id="mO1-9b-eMD"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="viewModel" destination="HMv-X5-xxz" id="Nfz-tW-Teh"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVU-ga-ziH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="HMv-X5-xxz" customClass="ViewModel" customModule="MVVMBlog" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-490" y="-97"/>
         </scene>

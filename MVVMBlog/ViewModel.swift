@@ -9,17 +9,19 @@
 import UIKit
 
 //1 - Setup my viewModel that inherits from NSObject
-class ViewModel: NSObject {
-    enum UseCase {
-        case test, actual
-    }
+class ViewModel {
+
     //2 - Create an apiClient property that we can use to call on our API call
-    var apiClient = APIClient.manager
+    var apiClient: APIClient!
     
     //3 - Define an apps property that will hold the data from the iTunes RSS top 100 free apps feed
     //This array is marked an optional (?) because we might not get back data from the iTunes API
     var apps: [NSDictionary]?
-    
+
+    init(with apiClient: APIClient) {
+        self.apiClient = apiClient
+    }
+
     //4 - This function is what directly accesses the apiClient to make the API call
     func getApps(completion: @escaping () -> Void) {
         //5 - call on the apiClient to fetch the apps

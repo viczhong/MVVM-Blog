@@ -11,17 +11,22 @@ import UIKit
 class TopAppsTableViewController: UITableViewController {
     
     //1 - 
-    @IBOutlet var viewModel: ViewModel!
+    var viewModel: ViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initializeViewModel()
+
         //2 - 
         viewModel.getApps() {
             
             //3 - 
             self.tableView.reloadData()
         }
+    }
+
+    func initializeViewModel() {
+        viewModel = ViewModel(with: APIClient())
     }
 
     // MARK: - Table view data source
