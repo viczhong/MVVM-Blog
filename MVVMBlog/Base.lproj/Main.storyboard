@@ -53,12 +53,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVU-ga-ziH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="7kQ-Wi-bc9" customClass="APIClient" customModule="MVVMBlog" customModuleProvider="target"/>
-                <customObject id="HMv-X5-xxz" customClass="ViewModel" customModule="MVVMBlog" customModuleProvider="target">
-                    <connections>
-                        <outlet property="apiClient" destination="7kQ-Wi-bc9" id="Nrm-9P-OZ0"/>
-                    </connections>
-                </customObject>
+                <customObject id="HMv-X5-xxz" customClass="ViewModel" customModule="MVVMBlog" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-490" y="-97"/>
         </scene>

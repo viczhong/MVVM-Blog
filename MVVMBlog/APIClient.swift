@@ -9,8 +9,9 @@
 import UIKit
 
 //1 - This APIClient will be called by the viewModel to get our top 100 app data.
-class APIClient: NSObject {
-
+class APIClient {
+    private init () {}
+    static let manager = APIClient()
     //2 - the completion handler will be executed after our top 100 app data is fetched
     // our completion handler will include an optional array of NSDictionaries parsed from our retrieved JSON object
 

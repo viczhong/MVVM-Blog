@@ -17,7 +17,7 @@ class TopAppsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //2 - 
-        viewModel.getApps { 
+        viewModel.getApps() {
             
             //3 - 
             self.tableView.reloadData()
