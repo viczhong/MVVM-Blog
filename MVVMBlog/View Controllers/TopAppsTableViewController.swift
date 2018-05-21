@@ -37,6 +37,7 @@ class TopAppsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
+        cell.imageView?.image = nil
         cell.textLabel?.text = viewModel.appTitleToDisplay(for: indexPath)
         cell.detailTextLabel?.text = viewModel.genreToDisplay(for: indexPath)
 

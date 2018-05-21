@@ -17,6 +17,7 @@
 		9E7EE79220B21166000E2F88 /* MVVMBlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7EE79120B21166000E2F88 /* MVVMBlogTests.swift */; };
 		9E7EE79B20B216F9000E2F88 /* apple100.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E7EE79A20B216F9000E2F88 /* apple100.json */; };
 		9E7EE79E20B21AB3000E2F88 /* DHURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7EE79C20B217A0000E2F88 /* DHURLSessionMock.swift */; };
+		9EA94B9420B2775E00D21C8E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA94B9320B2775E00D21C8E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 		455A0FE21EF4A0A300D45641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		455A0FE51EF4A0A300D45641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455A0FE71EF4A0A300D45641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		455A0FED1EF4A11300D45641 /* TopAppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopAppsTableViewController.swift; path = ../TopAppsTableViewController.swift; sourceTree = "<group>"; };
+		455A0FED1EF4A11300D45641 /* TopAppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAppsTableViewController.swift; sourceTree = "<group>"; };
 		455A0FEF1EF4A30F00D45641 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		455A0FF11EF4AC5900D45641 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9E7EE78F20B21166000E2F88 /* MVVMBlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMBlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		9E7EE79320B21166000E2F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7EE79A20B216F9000E2F88 /* apple100.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apple100.json; sourceTree = "<group>"; };
 		9E7EE79C20B217A0000E2F88 /* DHURLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHURLSessionMock.swift; sourceTree = "<group>"; };
+		9EA94B9320B2775E00D21C8E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,15 +87,11 @@
 		455A0FDA1EF4A0A300D45641 /* MVVMBlog */ = {
 			isa = PBXGroup;
 			children = (
-				455A0FDB1EF4A0A300D45641 /* AppDelegate.swift */,
-				455A0FEF1EF4A30F00D45641 /* APIClient.swift */,
-				455A0FF11EF4AC5900D45641 /* ViewModel.swift */,
-				455A0FED1EF4A11300D45641 /* TopAppsTableViewController.swift */,
-				455A0FDF1EF4A0A300D45641 /* Main.storyboard */,
-				455A0FE21EF4A0A300D45641 /* Assets.xcassets */,
-				455A0FE41EF4A0A300D45641 /* LaunchScreen.storyboard */,
-				9E7EE79C20B217A0000E2F88 /* DHURLSessionMock.swift */,
-				455A0FE71EF4A0A300D45641 /* Info.plist */,
+				9EA94B8F20B2771E00D21C8E /* Networking */,
+				9EA94B9020B2772D00D21C8E /* Storyboards */,
+				9EA94B8D20B2770A00D21C8E /* Supporting Files */,
+				9EA94B8C20B2770000D21C8E /* View Controllers */,
+				9EA94B8E20B2771700D21C8E /* View Models */,
 			);
 			path = MVVMBlog;
 			sourceTree = "<group>";
@@ -106,6 +104,51 @@
 				9E7EE79320B21166000E2F88 /* Info.plist */,
 			);
 			path = MVVMBlogTests;
+			sourceTree = "<group>";
+		};
+		9EA94B8C20B2770000D21C8E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				455A0FED1EF4A11300D45641 /* TopAppsTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9EA94B8D20B2770A00D21C8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EA94B9320B2775E00D21C8E /* Default-568h@2x.png */,
+				455A0FDB1EF4A0A300D45641 /* AppDelegate.swift */,
+				455A0FE21EF4A0A300D45641 /* Assets.xcassets */,
+				9E7EE79C20B217A0000E2F88 /* DHURLSessionMock.swift */,
+				455A0FE71EF4A0A300D45641 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EA94B8E20B2771700D21C8E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				455A0FF11EF4AC5900D45641 /* ViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		9EA94B8F20B2771E00D21C8E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				455A0FEF1EF4A30F00D45641 /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9EA94B9020B2772D00D21C8E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				455A0FDF1EF4A0A300D45641 /* Main.storyboard */,
+				455A0FE41EF4A0A300D45641 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				455A0FE61EF4A0A300D45641 /* LaunchScreen.storyboard in Resources */,
+				9EA94B9420B2775E00D21C8E /* Default-568h@2x.png in Resources */,
 				455A0FE31EF4A0A300D45641 /* Assets.xcassets in Resources */,
 				455A0FE11EF4A0A300D45641 /* Main.storyboard in Resources */,
 			);
@@ -377,9 +421,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
-				INFOPLIST_FILE = MVVMBlog/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMBlog/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.MVVMBlog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.MVVMBlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -391,9 +435,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
-				INFOPLIST_FILE = MVVMBlog/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVVMBlog/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.MVVMBlog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.MVVMBlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
