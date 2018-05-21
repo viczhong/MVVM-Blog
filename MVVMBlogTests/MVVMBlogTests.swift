@@ -15,8 +15,8 @@ class MVVMBlogTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        viewModel = ViewModel()
-        apiClientUnderTest = viewModel.apiClient
+        apiClientUnderTest = APIClient()
+        viewModel = ViewModel(with: apiClientUnderTest)
 
         let testBundle = Bundle(for: type(of: self))
         let path = testBundle.path(forResource: "apple100", ofType: "json")
@@ -27,7 +27,6 @@ class MVVMBlogTests: XCTestCase {
 
         let sessionMock = URLSessionMock(data: data, response: urlResponse, error: nil)
         apiClientUnderTest.defaultSession = sessionMock
-        viewModel.apiClient = apiClientUnderTest
 
         setUpMockSession()
     }
